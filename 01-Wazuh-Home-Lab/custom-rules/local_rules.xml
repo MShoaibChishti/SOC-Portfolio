@@ -1,0 +1,13 @@
+<!-- Custom Wazuh Rules — Muhammad Shoaib Chisti -->
+<!-- SOC Home Lab Project — May 2026 -->
+
+<group name="windows,authentication_failures,">
+  <rule id="100002" level="12" frequency="8" timeframe="120">
+    <if_matched_sid>60122</if_matched_sid>
+    <same_source_ip />
+    <description>Windows Brute Force Detected - Multiple failed logons from same source</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>
+</group>
